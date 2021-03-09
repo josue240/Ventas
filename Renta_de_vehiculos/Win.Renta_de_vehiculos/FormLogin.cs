@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Rentas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,14 @@ namespace Win.Renta_de_vehiculos
 {
     public partial class FormLogin : Form
     {
+        SeguridadBL _seguridad;
+   
+
         public FormLogin()
         {
             InitializeComponent();
+
+            _seguridad = new SeguridadBL();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -31,11 +37,13 @@ namespace Win.Renta_de_vehiculos
         {
             string usuario;
             string contrasena;
-
+            
             usuario = textBox1.Text;
             contrasena = textBox2.Text;
 
-            if (usuario == "admin" && contrasena == "123")
+            var resultado = _seguridad.Autorizar(usuario, contrasena);
+
+            if (resultado == true)
             {
                 this.Close();
             }

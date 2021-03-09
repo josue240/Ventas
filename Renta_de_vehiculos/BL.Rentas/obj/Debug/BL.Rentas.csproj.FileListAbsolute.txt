@@ -1,0 +1,10 @@
+D:\estudios\Unah\L3\Renta_de_vehiculos\BL.Rentas\bin\Debug\BL.Rentas.dll
+D:\estudios\Unah\L3\Renta_de_vehiculos\BL.Rentas\bin\Debug\BL.Rentas.pdb
+D:\estudios\Unah\L3\Renta_de_vehiculos\BL.Rentas\obj\Debug\BL.Rentas.csprojResolveAssemblyReference.cache
+D:\estudios\Unah\L3\Renta_de_vehiculos\BL.Rentas\obj\Debug\BL.Rentas.dll
+D:\estudios\Unah\L3\Renta_de_vehiculos\BL.Rentas\obj\Debug\BL.Rentas.pdb
+D:\estudios\Unah\L3\Renta_de_vehiculos\BL.Rentas\bin\Debug\BL.Rentas.dll.config
+D:\estudios\Unah\L3\Renta_de_vehiculos\BL.Rentas\bin\Debug\EntityFramework.dll
+D:\estudios\Unah\L3\Renta_de_vehiculos\BL.Rentas\bin\Debug\EntityFramework.SqlServer.dll
+D:\estudios\Unah\L3\Renta_de_vehiculos\BL.Rentas\bin\Debug\EntityFramework.xml
+D:\estudios\Unah\L3\Renta_de_vehiculos\BL.Rentas\bin\Debug\EntityFramework.SqlServer.xml
