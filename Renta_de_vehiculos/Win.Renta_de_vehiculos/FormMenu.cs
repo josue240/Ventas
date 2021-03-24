@@ -99,5 +99,6 @@ namespace Win.Renta_de_vehiculos
             formContacto.MdiParent = this;
             formContacto.Show();
         }
+
     }
 }

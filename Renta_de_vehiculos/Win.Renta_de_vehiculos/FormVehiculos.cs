@@ -15,8 +15,8 @@ namespace Win.Renta_de_vehiculos
     public partial class FormVehiculos : Form
     {
         VehiculoBL _vehiculo;
-
         TiposBL _tipos;
+
         public FormVehiculos()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace Win.Renta_de_vehiculos
             vehiculoBindingSource.DataSource = _vehiculo.ObtenerVehiculos();
 
             _tipos = new TiposBL();
-            listaTipoBindingSource.DataSource = _tipos.ObtenerTipo();
+            listaTipoBindingSource.DataSource = _tipos.ObtenerTipos();
              
         }
 
@@ -44,7 +44,7 @@ namespace Win.Renta_de_vehiculos
             vehiculoBindingSource.EndEdit();
             var vehiculo = (Vehiculo)vehiculoBindingSource.Current;
 
-            if (fotoPictureBox.Image!= null)
+            if (fotoPictureBox.Image != null)
             {
                 vehiculo.Foto = Program.imageToByteArray(fotoPictureBox.Image);
             }
@@ -55,6 +55,7 @@ namespace Win.Renta_de_vehiculos
             }
 
             var resultado = _vehiculo.GuardarVehiculo(vehiculo);
+
             if (resultado.Exitoso == true)
             {
                 vehiculoBindingSource.ResetBindings(false);
@@ -121,6 +122,12 @@ namespace Win.Renta_de_vehiculos
 
         }
 
+        private void Cancelar_click(object sender, EventArgs e)
+        {
+            _vehiculo.CancelarCambios();
+            DeshabilitarHabilitarBotenes(true);
+        }
+
         private void Cancelar_Click(object sender, EventArgs e)
         {
             DeshabilitarHabilitarBotenes(true);
@@ -128,6 +135,11 @@ namespace Win.Renta_de_vehiculos
         }
 
         private void fotoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormProductos_Load(object sender, EventArgs e)
         {
 
         }
@@ -177,6 +189,26 @@ namespace Win.Renta_de_vehiculos
         }
 
         private void tiposBLBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iDTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void descripcionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormVehiculos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void precioTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

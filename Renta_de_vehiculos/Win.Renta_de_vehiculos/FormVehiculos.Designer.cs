@@ -101,7 +101,7 @@
             iDLabel.Name = "iDLabel";
             iDLabel.Size = new System.Drawing.Size(21, 13);
             iDLabel.TabIndex = 5;
-            iDLabel.Text = "ID:";
+            iDLabel.Text = "Id:";
             // 
             // placaLabel
             // 
@@ -280,15 +280,17 @@
             this.descripcionTextBox.Name = "descripcionTextBox";
             this.descripcionTextBox.Size = new System.Drawing.Size(179, 20);
             this.descripcionTextBox.TabIndex = 4;
+            this.descripcionTextBox.TextChanged += new System.EventHandler(this.descripcionTextBox_TextChanged);
             // 
             // iDTextBox
             // 
-            this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "ID", true));
+            this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiculoBindingSource, "Id", true));
             this.iDTextBox.Location = new System.Drawing.Point(91, 70);
             this.iDTextBox.Name = "iDTextBox";
             this.iDTextBox.ReadOnly = true;
             this.iDTextBox.Size = new System.Drawing.Size(176, 20);
             this.iDTextBox.TabIndex = 6;
+            this.iDTextBox.TextChanged += new System.EventHandler(this.iDTextBox_TextChanged);
             // 
             // placaTextBox
             // 
@@ -305,6 +307,7 @@
             this.precioTextBox.Name = "precioTextBox";
             this.precioTextBox.Size = new System.Drawing.Size(179, 20);
             this.precioTextBox.TabIndex = 10;
+            this.precioTextBox.TextChanged += new System.EventHandler(this.precioTextBox_TextChanged);
             // 
             // activoCheckBox
             // 
@@ -319,7 +322,7 @@
             // fotoPictureBox
             // 
             this.fotoPictureBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.vehiculoBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.vehiculoBindingSource, "Foto", true));
             this.fotoPictureBox.Location = new System.Drawing.Point(337, 44);
             this.fotoPictureBox.Name = "fotoPictureBox";
             this.fotoPictureBox.Size = new System.Drawing.Size(312, 189);
@@ -350,12 +353,12 @@
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.Filter = "jpg, png | *.jgp; *.png";
+            this.openFileDialog1.Filter = "jpg, png | *.jpg; *.png";
             // 
             // tipoidComboBox
             // 
             this.tipoidComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.vehiculoBindingSource, "Tipoid", true));
-            this.tipoidComboBox.DataSource = this.vehiculoBindingSource;
+            this.tipoidComboBox.DataSource = this.listaTipoBindingSource;
             this.tipoidComboBox.DisplayMember = "Descripcion";
             this.tipoidComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipoidComboBox.FormattingEnabled = true;
@@ -393,6 +396,7 @@
             this.Controls.Add(this.vehiculoBindingNavigator);
             this.Name = "FormVehiculos";
             this.Text = "Vehiculos";
+            this.Load += new System.EventHandler(this.FormVehiculos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingNavigator)).EndInit();
             this.vehiculoBindingNavigator.ResumeLayout(false);
             this.vehiculoBindingNavigator.PerformLayout();
