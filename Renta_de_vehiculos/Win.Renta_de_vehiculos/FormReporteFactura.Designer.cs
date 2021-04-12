@@ -1,6 +1,6 @@
 ﻿namespace Win.Renta_de_vehiculos
 {
-    partial class FormReporteProductos
+    partial class FormReporteFactura
     {
         /// <summary>
         /// Required designer variable.
@@ -39,18 +39,19 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(869, 621);
+            this.crystalReportViewer1.ShowGroupTreeButton = false;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(738, 584);
             this.crystalReportViewer1.TabIndex = 0;
             // 
-            // FormReporteProductos
+            // FormReporteFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 621);
+            this.ClientSize = new System.Drawing.Size(738, 584);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "FormReporteProductos";
-            this.Text = "Reporte Productos";
-            this.Load += new System.EventHandler(this.FormReporteProductos_Load);
+            this.Name = "FormReporteFactura";
+            this.Text = "Reporte de Factura";
+            this.Load += new System.EventHandler(this.FormReporteFactura_Load);
             this.ResumeLayout(false);
 
         }

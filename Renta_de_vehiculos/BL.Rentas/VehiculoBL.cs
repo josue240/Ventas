@@ -27,6 +27,12 @@ namespace BL.Rentas
 
             return ListaVehiculo;
         }
+
+        public object ObtenerProductos()
+        {
+            throw new NotImplementedException();
+        }
+
         public void CancelarCambios()
         {
             foreach (var item in _contexto.ChangeTracker.Entries())
@@ -89,11 +95,7 @@ namespace BL.Rentas
                 resultado.Exitoso = false;
             }
 
-            if (vehiculo.Existencia < 0)
-            {
-                resultado.Mensaje = "La existencia tiene que ser mayor que 0";
-                resultado.Exitoso = false;
-            }
+            
             if (vehiculo.Precio < 0)
             {
                 resultado.Mensaje = "El Precio tiene que ser mayor que 0";

@@ -11,24 +11,24 @@ using System.Windows.Forms;
 
 namespace Win.Renta_de_vehiculos
 {
-    public partial class FormReporteProductos : Form
+    public partial class FormReporteFactura : Form
     {
-        public FormReporteProductos()
+        public FormReporteFactura()
         {
             InitializeComponent();
 
-            var _vehiculoBL = new VehiculoBL();
+            var _facturaBL = new FacturaBL();
             var bindingSource = new BindingSource();
-            bindingSource.DataSource = _vehiculoBL.ObtenerVehiculos();
+            bindingSource.DataSource = _facturaBL.ObtenerFacturas();
 
-            var reporte = new ReporteVehiculo();
+            var reporte = new ReporteFacturas();
             reporte.SetDataSource(bindingSource);
 
             crystalReportViewer1.ReportSource = reporte;
             crystalReportViewer1.RefreshReport();
         }
 
-        private void FormReporteProductos_Load(object sender, EventArgs e)
+        private void FormReporteFactura_Load(object sender, EventArgs e)
         {
 
         }

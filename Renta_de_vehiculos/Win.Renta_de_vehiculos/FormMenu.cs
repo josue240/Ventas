@@ -60,9 +60,9 @@ namespace Win.Renta_de_vehiculos
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formClientes = new FormClientes();
-            formClientes.MdiParent = this;
-            formClientes.Show();
+            var formReporteFactura = new FormReporteFactura();
+            formReporteFactura.MdiParent = this;
+            formReporteFactura.Show();
 
         }
 
@@ -100,5 +100,12 @@ namespace Win.Renta_de_vehiculos
             formContacto.Show();
         }
 
+        private void reporteFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteFacturas = new FormReporteFactura();
+            formReporteFacturas.MdiParent = this;
+            formReporteFacturas.Show();
+        }
+    
     }
 }
