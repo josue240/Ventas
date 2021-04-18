@@ -1,4 +1,5 @@
-﻿using BL.Rentas;
+﻿
+using BL.Rentas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,7 +34,7 @@ namespace Win.Renta_de_vehiculos
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string usuario;
             string contrasena;
@@ -45,9 +46,7 @@ namespace Win.Renta_de_vehiculos
 
             if (resultado == true)
             {
-
-                Utlis.nombreusuario = "Hola Mundo";
-
+                Utils.nombreUsuario = "Administrador";
                 this.Close();
             }
             else
@@ -57,7 +56,7 @@ namespace Win.Renta_de_vehiculos
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -71,6 +70,7 @@ namespace Win.Renta_de_vehiculos
         {
 
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {

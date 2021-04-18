@@ -11,6 +11,8 @@ namespace BL.Rentas
     public class VehiculoBL
     {
         Contexto _contexto;
+        
+
         public BindingList<Vehiculo> ListaVehiculo { get; set; }
 
         public VehiculoBL()
@@ -20,12 +22,19 @@ namespace BL.Rentas
             ListaVehiculo = new BindingList<Vehiculo>();
         }
 
-        public BindingList<Vehiculo> ObtenerVehiculos()
+        public IEnumerable<Vehiculo> ObtenerVehiculos()
         {
             _contexto.Vehiculo.Load();
             ListaVehiculo = _contexto.Vehiculo.Local.ToBindingList();
 
-            return ListaVehiculo;
+            return ListaVehiculo.OrderBy(r => r.Descripcion);
+        }
+        public IEnumerable<Vehiculo> ObtenerVehiculos(string buscar)
+        {
+            var descripcion = buscar.ToLower().Trim();
+            var resultado = _contexto.Vehiculo.Where(r => r.Descripcion.ToLower().Contains(descripcion)).ToList();
+
+            return resultado;
         }
 
         public object ObtenerProductos()

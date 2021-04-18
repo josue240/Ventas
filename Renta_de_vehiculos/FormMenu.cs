@@ -43,6 +43,8 @@ namespace Win.Renta_de_vehiculos
         {
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
+
+            
         }
 
         private void FormMenu_Load(object sender, EventArgs e)
@@ -50,7 +52,7 @@ namespace Win.Renta_de_vehiculos
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
 
-            toolStripStatusLabel1.Text = Utlis.nombreusuario;
+            toolStripStatusLabel1.Text = Utils.nombreUsuario;
         }
 
         private void vehiculosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,10 +110,6 @@ namespace Win.Renta_de_vehiculos
             formReporteFacturas.MdiParent = this;
             formReporteFacturas.Show();
         }
-
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
+    
     }
 }

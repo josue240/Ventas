@@ -24,5 +24,10 @@ namespace BL.Rentas
             }
             return false;
         }
+
     }
 }
+
+
+
+

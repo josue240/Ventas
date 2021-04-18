@@ -141,7 +141,7 @@
       <DependentUpon>ReporteVehiculo.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Utlis.cs" />
+    <Compile Include="Utils.cs" />
     <EmbeddedResource Include="FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
